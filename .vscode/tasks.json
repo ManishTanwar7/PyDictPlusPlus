@@ -1,0 +1,137 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "type": "shell",
+      "label": "PyDict++: Build All Tests",
+      "command": "C:/Users/mstan/AppData/Local/Microsoft/WinGet/Packages/BrechtSanders.WinLibs.POSIX.UCRT_Microsoft.Winget.Source_8wekyb3d8bbwe/mingw64/bin/g++.exe",
+      "args": [
+        "-std=c++17",
+        "-O2",
+        "-Wall",
+        "-Wextra",
+        "-I${workspaceFolder}/include",
+        "${workspaceFolder}/tests/run_all_tests.cpp",
+        "${workspaceFolder}/tests/test_member1_core.cpp",
+        "${workspaceFolder}/tests/test_member2_python_ops.cpp",
+        "${workspaceFolder}/tests/test_member3_advanced.cpp",
+        "${workspaceFolder}/tests/test_nested_dict.cpp",
+        "-o",
+        "${workspaceFolder}/bin/run_all_tests.exe"
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": ["$gcc"]
+    },
+    {
+      "type": "shell",
+      "label": "PyDict++: Run All Tests",
+      "command": "${workspaceFolder}/bin/run_all_tests.exe",
+      "dependsOn": "PyDict++: Build All Tests",
+      "group": "test",
+      "problemMatcher": []
+    },
+    {
+      "type": "shell",
+      "label": "PyDict++: Build Quickstart App",
+      "command": "C:/Users/mstan/AppData/Local/Microsoft/WinGet/Packages/BrechtSanders.WinLibs.POSIX.UCRT_Microsoft.Winget.Source_8wekyb3d8bbwe/mingw64/bin/g++.exe",
+      "args": [
+        "-std=c++17",
+        "-O1",
+        "-static",
+        "-I${workspaceFolder}/include",
+        "${workspaceFolder}/quickstart_app.cpp",
+        "-o",
+        "${workspaceFolder}/bin/quickstart_app.exe"
+      ],
+      "problemMatcher": ["$gcc"]
+    },
+    {
+      "type": "shell",
+      "label": "PyDict++: Run Quickstart Showcase App",
+      "command": "${workspaceFolder}/bin/quickstart_app.exe",
+      "dependsOn": "PyDict++: Build Quickstart App",
+      "group": "build",
+      "problemMatcher": []
+    },
+    {
+      "type": "shell",
+      "label": "PyDict++: Build Benchmark",
+      "command": "C:/Users/mstan/AppData/Local/Microsoft/WinGet/Packages/BrechtSanders.WinLibs.POSIX.UCRT_Microsoft.Winget.Source_8wekyb3d8bbwe/mingw64/bin/g++.exe",
+      "args": [
+        "-std=c++17",
+        "-O3",
+        "-I${workspaceFolder}/include",
+        "${workspaceFolder}/benchmark/main_benchmark.cpp",
+        "-o",
+        "${workspaceFolder}/bin/main_benchmark.exe"
+      ],
+      "problemMatcher": ["$gcc"]
+    },
+    {
+      "type": "shell",
+      "label": "PyDict++: Run Benchmark",
+      "command": "${workspaceFolder}/bin/main_benchmark.exe",
+      "dependsOn": "PyDict++: Build Benchmark",
+      "problemMatcher": []
+    },
+    {
+      "type": "shell",
+      "label": "PyDict++: Build Basic Usage Example",
+      "command": "C:/Users/mstan/AppData/Local/Microsoft/WinGet/Packages/BrechtSanders.WinLibs.POSIX.UCRT_Microsoft.Winget.Source_8wekyb3d8bbwe/mingw64/bin/g++.exe",
+      "args": [
+        "-std=c++17",
+        "-O2",
+        "-I${workspaceFolder}/include",
+        "${workspaceFolder}/examples/basic_usage.cpp",
+        "-o",
+        "${workspaceFolder}/bin/basic_usage.exe"
+      ],
+      "problemMatcher": ["$gcc"]
+    },
+    {
+      "type": "shell",
+      "label": "PyDict++: Build Advanced Features Example",
+      "command": "C:/Users/mstan/AppData/Local/Microsoft/WinGet/Packages/BrechtSanders.WinLibs.POSIX.UCRT_Microsoft.Winget.Source_8wekyb3d8bbwe/mingw64/bin/g++.exe",
+      "args": [
+        "-std=c++17",
+        "-O2",
+        "-I${workspaceFolder}/include",
+        "${workspaceFolder}/examples/advanced_features.cpp",
+        "-o",
+        "${workspaceFolder}/bin/advanced_features.exe"
+      ],
+      "problemMatcher": ["$gcc"]
+    },
+    {
+      "type": "shell",
+      "label": "PyDict++: Build Custom Keys Example",
+      "command": "C:/Users/mstan/AppData/Local/Microsoft/WinGet/Packages/BrechtSanders.WinLibs.POSIX.UCRT_Microsoft.Winget.Source_8wekyb3d8bbwe/mingw64/bin/g++.exe",
+      "args": [
+        "-std=c++17",
+        "-O2",
+        "-I${workspaceFolder}/include",
+        "${workspaceFolder}/examples/custom_keys.cpp",
+        "-o",
+        "${workspaceFolder}/bin/custom_keys.exe"
+      ],
+      "problemMatcher": ["$gcc"]
+    },
+    {
+      "type": "shell",
+      "label": "PyDict++: Build Nested Dict Demo",
+      "command": "C:/Users/mstan/AppData/Local/Microsoft/WinGet/Packages/BrechtSanders.WinLibs.POSIX.UCRT_Microsoft.Winget.Source_8wekyb3d8bbwe/mingw64/bin/g++.exe",
+      "args": [
+        "-std=c++17",
+        "-O2",
+        "-I${workspaceFolder}/include",
+        "${workspaceFolder}/examples/nested_dict_demo.cpp",
+        "-o",
+        "${workspaceFolder}/bin/nested_dict_demo.exe"
+      ],
+      "problemMatcher": ["$gcc"]
+    }
+  ]
+}
