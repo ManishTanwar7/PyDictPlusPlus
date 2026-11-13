@@ -2,6 +2,8 @@
 
 A modern, header-only C++17 library that brings the simplicity, functionality, and developer ergonomics of Python dictionaries to C++. Built from scratch using a custom dual-chain hash table without relying on standard associative containers.
 
+Academic Project Report: [`PyDict_Project_Report.pdf`](PyDict_Project_Report.pdf)
+
 ---
 
 ## Problem Statement
@@ -228,6 +230,17 @@ Measured on x86_64 across 50,000 operations compiled with `-O3`:
 | **Lookup (Misses)** | **0.09 ms** | 0.41 ms | 0.31 ms | **3.4x faster** |
 | **Iteration Traversal** | **1.20 ms** | 1.61 ms | 1.15 ms | **Faster than std::map** |
 | **Bulk Erase** | **5.53 ms** | 9.70 ms | 2.80 ms | **1.75x faster** |
+
+---
+
+## Project Documentation & Report
+
+The complete academic project report is available in the repository:
+- Document: [`PyDict_Project_Report.pdf`](PyDict_Project_Report.pdf)
+- Title: *PyDict++: A Python-Inspired Dictionary Library for C++ Using a Dual-Chain Hash Table*
+- Authors: Kartik Bhardwaj (25BCS12463), Manish Tanwar (25BCS11666), Vinay Rawat (25BCS10360)
+- Institution: Department of Computer Science & Engineering, Chandigarh University
+- Supervisor: Mr. Tausef
 
 ---
 
